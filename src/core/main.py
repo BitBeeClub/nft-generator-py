@@ -133,11 +133,13 @@ class Generator:
                 # get the image for the trait
                 for i, trait in enumerate(self.config["layers"][index]["values"]):
                     if trait == attr["value"]:
-                        layers.append(
-                            Image.open(
+                        image = Image.open(
                                 f'{self.config["layers"][index]["trait_path"]}/{self.config["layers"][index]["filename"][i]}.png'
                             ).convert("RGBA")
-                        )
+
+                        if layers:
+                            image = image.resize(layers[0].size)
+                        layers.append(image)
                         break
 
             if len(layers) == 1:

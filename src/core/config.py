@@ -8,7 +8,9 @@ from src.utils.logger import get_logger
 def generate_config(trait_dir: str, output: str, verbose: int) -> None:
     logger = get_logger(verbose)
     layerlist = list_name(f"{trait_dir}/*")
+    layerlist.sort()
     path_list = list_full_dir(f"{trait_dir}/")
+    path_list.sort()
     item_list = [list_name(items + "/*") for items in path_list]
 
     # calculate weight

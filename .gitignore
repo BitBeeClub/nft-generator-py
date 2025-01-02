@@ -34,3 +34,7 @@ coverage.xml
 *images/*.png
 
 .DS_Store
+
+.history
+layers
+generated.json
