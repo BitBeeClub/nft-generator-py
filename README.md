@@ -18,7 +18,9 @@ python3 -m pip install -r requirements.txt
 
 ## 4 使用说明
 
-### 4.1 将所有图层文件夹，放到一个目录中(example: trait-layers)，并进行编号，最底层的图层编号最小
+### 4.1 汇总图层文件
+
+将所有图层文件夹，放到一个目录中(example: trait-layers)，并进行编号，最底层的图层编号最小
 
 例如：从底到顶三个图层
 - 01-background
